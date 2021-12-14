@@ -7,9 +7,11 @@ import com.google.gson.Gson
 class MainViewModel(val context: Context): ViewModel() {
     //declare variable quoteList that is array type,and it is declared as empty array
     private var quoteList: Array<Quote> = emptyArray()
+    //assign initial index value 0.
     private var index = 0
     //initialize quoteList to a function it returns Array of Quote implementation done below
     init {
+        //loadQuoteFromAssets function implementation below
         quoteList = loadQuoteFromAssets()
     }
 
